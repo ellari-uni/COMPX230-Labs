@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Jul 14 08:58:29 2025
-| Host         : lab-rg06-24 running 64-bit Ubuntu 22.04.5 LTS
+| Date         : Mon Jul 28 09:51:08 2025
+| Host         : lab-rg06-25 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file die_utilization_synth.rpt -pb die_utilization_synth.pb
 | Design       : die
 | Device       : xc7a35tcpg236-1
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    3 |     0 |          0 |     20800 |  0.01 |
-|   LUT as Logic          |    3 |     0 |          0 |     20800 |  0.01 |
+| Slice LUTs*             |    5 |     0 |          0 |     20800 |  0.02 |
+|   LUT as Logic          |    5 |     0 |          0 |     20800 |  0.02 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |    4 |     0 |          0 |     41600 | <0.01 |
-|   Register as Flip Flop |    4 |     0 |          0 |     41600 | <0.01 |
+| Slice Registers         |    3 |     0 |          0 |     41600 | <0.01 |
+|   Register as Flip Flop |    3 |     0 |          0 |     41600 | <0.01 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
@@ -57,8 +57,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 4     |          Yes |           - |        Reset |
+| 1     |          Yes |           - |          Set |
+| 2     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    7 |     0 |          0 |       106 |  6.60 |
+| Bonded IOB                  |   14 |     0 |          0 |       106 | 13.21 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -152,13 +152,11 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    4 |                  IO |
-| FDCE     |    4 |        Flop & Latch |
+| OBUF     |   11 |                  IO |
+| LUT3     |   10 |                 LUT |
 | IBUF     |    3 |                  IO |
-| LUT2     |    2 |                 LUT |
-| LUT4     |    1 |                 LUT |
-| LUT3     |    1 |                 LUT |
-| LUT1     |    1 |                 LUT |
+| FDCE     |    2 |        Flop & Latch |
+| FDPE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Jul 14 08:59:10 2025
-| Host         : lab-rg06-24 running 64-bit Ubuntu 22.04.5 LTS
+| Date         : Mon Jul 28 09:51:50 2025
+| Host         : lab-rg06-25 running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_drc -file die_drc_routed.rpt -pb die_drc_routed.pb -rpx die_drc_routed.rpx
 | Design       : die
 | Device       : xc7a35tcpg236-1

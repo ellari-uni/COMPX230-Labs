@@ -31,13 +31,15 @@ module die_tb;
 
 	// Outputs
 	wire [3:0] value;
+	wire [6:0] cathodes;
 
 	// Instantiate the Unit Under Test (UUT)
 	die uut (
 		.clock(clock),
 		.reset(reset),
 		.roll(roll),
-		.value(value)
+		.value(value),
+		.cathodes(cathodes)
 	);
 
 	initial begin
